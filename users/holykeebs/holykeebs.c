@@ -728,6 +728,11 @@ void keyboard_post_init_user(void) {
         debug_hk_state_to_console(&g_hk_state);
     }
 
+    debug_enable=true;
+    debug_matrix=true;
+    debug_keyboard=true;
+    debug_mouse=true;
+
     keyboard_post_init_keymap();
 }
 

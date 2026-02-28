@@ -1,0 +1,15 @@
+// Copyright 2022 Stefan Kerkmann
+// Copyright 2026 Taneli Leppä
+// SPDX-License-Identifier: GPL-2.0-or-later
+
+#pragma once
+
+#define QMK_WAITING_TEST_BUSY_PIN GP8
+#define QMK_WAITING_TEST_YIELD_PIN GP9
+
+#define PS2_MOUSE_DEBUG_HID
+#define PS2_MOUSE_DEBUG_RAW
+
+#define HK_MAIN_DEFAULT_POINTER_DEFAULT_MULTIPLIER 3.5
+#define HK_PERIPHERAL_DEFAULT_POINTER_DEFAULT_MULTIPLIER 1
+

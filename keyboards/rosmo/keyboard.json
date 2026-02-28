@@ -1,0 +1,45 @@
+{
+    "maintainer": "rosmo",
+    "manufacturer": "rosmo",
+    "keyboard_name": "Trackpoint2040",
+    "processor": "RP2040",
+    "bootloader": "rp2040",
+    "usb": {
+        "vid": "0x1209",
+        "pid": "0x0010",
+        "device_version": "1.0.0"
+    },
+    "diode_direction": "COL2ROW",
+    "matrix_pins": {
+        "cols": [
+            "GP4"
+        ],
+        "rows": [
+            "GP5"
+        ]
+    },
+    "features": {
+        "bootmagic": false,
+        "extrakey": false,
+        "nkro": true,
+        "oled": false,
+        "rgblight": false,
+        "rgb_matrix": false
+    },
+    "layouts": {
+        "LAYOUT": {
+            "layout": [
+                {
+                    "matrix": [
+                        0,
+                        0
+                    ],
+                    "x": 0,
+                    "y": 0,
+                    "w": 4,
+                    "h": 4
+                }
+            ]
+        }
+    }
+}
