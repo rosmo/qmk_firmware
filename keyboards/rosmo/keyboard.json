@@ -12,14 +12,17 @@
     "diode_direction": "COL2ROW",
     "matrix_pins": {
         "cols": [
-            "GP4"
+            "GP6", 
+            "GP7",
+            "GP8"
         ],
         "rows": [
+            "GP4",
             "GP5"
         ]
     },
     "features": {
-        "bootmagic": false,
+        "bootmagic": true,
         "extrakey": false,
         "nkro": true,
         "oled": false,
@@ -30,14 +33,58 @@
         "LAYOUT": {
             "layout": [
                 {
+                    "label": "btn1",
                     "matrix": [
                         0,
                         0
                     ],
                     "x": 0,
-                    "y": 0,
-                    "w": 4,
-                    "h": 4
+                    "y": 0
+                },
+                {
+                    "label": "btn2",
+                    "matrix": [
+                        0,
+                        1
+                    ],
+                    "x": 1,
+                    "y": 0
+                },
+                {
+                    "label": "btn3",
+                    "matrix": [
+                        0,
+                        2
+                    ],
+                    "x": 2,
+                    "y": 0
+                },
+                {
+                    "label": "btn4",
+                    "matrix": [
+                        1,
+                        0
+                    ],
+                    "x": 0,
+                    "y": 1
+                },
+                {
+                    "label": "btn5",
+                    "matrix": [
+                        1,
+                        1
+                    ],
+                    "x": 1,
+                    "y": 1
+                },
+                {
+                    "label": "btn6",
+                    "matrix": [
+                        1,
+                        2
+                    ],
+                    "x": 2,
+                    "y": 1
                 }
             ]
         }
