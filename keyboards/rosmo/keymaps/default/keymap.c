@@ -20,39 +20,39 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
+// Layer 0, default
+LAYOUT(
+    QK_MOUSE_BUTTON_1, HK_D_MODE, QK_MOUSE_BUTTON_2, // Key switches
+    LT(3, KC_VOLU), LT(2, KC_VOLD), MO(1)), // Right button, left button, scroll wheel
+
+// Layer 1, scroll wheel page up and now
 LAYOUT(
     QK_MOUSE_BUTTON_1, HK_D_MODE, QK_MOUSE_BUTTON_2,
-    MO(1), MO(2), KC_WWW_BACK),
+    MO(1), MO(2), MO(1)),
 
+// Layer 2, configuration 1
 LAYOUT(
-    HK_SAVE, HK_I_SCROLL, HK_C_SCROLL,
-    QK_MOUSE_BUTTON_4, QK_MOUSE_BUTTON_5, HK_RESET),
+    HK_P_SET_D, HK_P_SET_S, HK_P_SET_BUF,
+    HK_I_SCROLL, KC_NO, HK_DUMP),
  
+// Layer 3, configuration 2
 LAYOUT(
-    KC_LEFT_SHIFT, HK_P_SET_D, HK_P_SET_BUF,
-    QK_MOUSE_BUTTON_4, QK_MOUSE_BUTTON_5, HK_DUMP),
+    HK_S_MODE_T, HK_D_MODE_T, HK_C_SCROLL,
+    KC_NO, HK_SAVE, HK_RESET),
 
 };
 
 #if defined(ENCODER_MAP_ENABLE)
 const uint16_t PROGMEM encoder_map[][NUM_ENCODERS_LEFT][NUM_DIRECTIONS] = {
-    [0] = { ENCODER_CCW_CW(MS_WHLU, MS_WHLD) },
-    [1] = { ENCODER_CCW_CW(MS_WHLU, MS_WHLD) },
-    [2] = { ENCODER_CCW_CW(MS_WHLU, MS_WHLD) },
+    // Layer 1, default
+    [0] = { ENCODER_CCW_CW(MS_WHLU, MS_WHLD) }, // Scroll up / down
+    // Layer 2, scroll wheel page up and down
+    [1] = { ENCODER_CCW_CW(KC_PAGE_UP, KC_PAGE_DOWN) }, // Page up / page down
+    // Layer 3, configurations 1 - adjust default profile scale
+    [2] = { ENCODER_CCW_CW(KC_UP, KC_DOWN) },
+    // Layer 4, configurations 1 - adjust scroll buffer
+    [3] = { ENCODER_CCW_CW(KC_UP, KC_DOWN) },
 };
 #endif
 
-bool initialized = 0;
 
-#if 0
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-  switch (keycode) {
-  case KC_A:
-    if (record->event.pressed) {
-      SEND_STRING("Howdy!!\n");
-      return false;
-    }
-  }
-  return true;
-}
-#endif
